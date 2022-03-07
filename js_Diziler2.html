@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Soru:Bir dizi uzerinde tanımlanmış olan şehirleri sırasız lisete yazdırınız.
+
+        
+
+        const dizi=["İstanbul","Ankara","Bursa","Sakarya","Edirne"];
+
+        for (let i = 0; i < 3 ;i++) 
+        {
+            dizi.push(prompt("Şehir adı giriniz"));
+        }
+        dizi.sort();
+        dizi.reverse();
+        let str="";
+
+        // for(let i=0;i<dizi.length;i++)
+        //     str+="<ul>"+dizi[i]+"</ul>";
+
+        // document.writeln("<ol>"+str+"</ol>");
+
+        
+
+        document.writeln("<br>")
+        dizi.forEach(x=>{str+="<li>"+x+"</li>"})
+        document.writeln("<ul>"+str+"</ul>");
+
+        
+
+    </script>
+</body>
+</html>

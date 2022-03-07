@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sehir=["istanbul","Ankara","Bursa","İzmir","Edirne","Tekirdağ","Kastamonu","Karabük","Kırıkkale","Antalya","Samsun","Trabzon","Rize","Zonguldak","Düzce","Hakkari","Batman","Kars","Sakarya","Çankırı"];
+
+        let sehirler=new Array(8);
+        let sayac=0;
+        while(sehirler.length==8)
+        {
+            let sayi=sehir[Math.ceil(Math.random()*sehir.length)];
+            if(sehirler.findIndex(x=> x==sayi)<0)
+            {
+                sehirler[sayac]=sayi;
+                sayac++;
+            }
+        }
+        // document.writeln(sehirler);
+
+        document.writeln("<table border=1>");
+        for(let i=0;i<3;i++)
+        {
+            document.writeln("<tr>");
+            for(let j=0;j<3;j++)
+            {   
+                document.writeln("<td>"+sehirler[i*3+j]+"</td>");
+            }
+            document.writeln("</tr>");
+        }
+        document.writeln("</table>");
+    </script>
+</body>
+</html>

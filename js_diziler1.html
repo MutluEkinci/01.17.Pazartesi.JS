@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Diziler:Aynı zamanda koleksiyon gibi davranır.
+        İçerisinde birden fazla değer tutan değişkenlerdir.
+        Boyutları run time da değiştirilebilir.
+        */
+        //Dizi tanımlama
+        let dizi1=[12,3153,5,8,15,6551,156,15,8,849]
+        let dizi2=new Array(2,524,738,45,12,5,8,37);
+
+        for(let i=0;i<dizi1.length;i++)
+        {
+            document.writeln(dizi1[i]);
+        }
+
+        //Diğer Döngüler
+        //4-For..in
+        //5-for..of
+        //6-foreach
+        document.writeln("<br>");
+
+        //4-for.in:sayı değişkeninde indis gelir.
+        for(sayi in dizi1)
+        {
+            document.writeln(sayi+"=>"+dizi1[sayi]+",");
+        }
+        
+        document.writeln("<br>");
+
+        //5-for.of:Dizinin içerisindeki değerler gelir.
+        for (sayi of dizi2) 
+        {
+            document.writeln(sayi+",");
+        }
+
+        document.writeln("<br>");
+        //6-Foreach
+
+        dizi2.forEach(x=>{document.writeln(x);});
+
+        //Ekrana dizi içerisindeki değerleri yazdırmak için en iyi yöntem???
+
+        document.writeln("<br>");
+
+        document.writeln(dizi1);
+        document.writeln(dizi2.toString());
+
+
+        //Dizi elemanlarına ulaşma
+        document.writeln("<br>");
+
+        document.writeln(dizi2[0]);
+        dizi2[0]=111;
+        
+        document.writeln("<br>");
+        document.writeln(dizi2);
+        
+        //diziye yeni değer ekleme
+
+        dizi2.push(202);
+        document.writeln("<br>");
+        document.writeln(dizi2);
+        document.writeln("<br>");
+        document.writeln(dizi2.pop());
+        document.writeln("<br>");
+        document.writeln(dizi2.pop());
+
+        document.writeln("<br>");
+        document.writeln(dizi2);
+
+        document.writeln("<br>");
+        document.writeln(dizi2.shift());//son sayıyı çıkartır.
+
+        document.writeln("<br>");
+        document.writeln(dizi2);
+
+        document.writeln("<br>");
+        document.writeln(dizi2.unshift(99));//eleman sayısını gösterir ve 99u ilk sıraya ekler
+
+        document.writeln("<br>");
+        document.writeln(dizi2);
+
+       //Özel durum!!!
+       let dizi3=[11];
+       let dizi4= new Array(11);
+       
+       document.writeln("<br>");
+       document.writeln(dizi3 +"adet:"+dizi3.length);
+
+       document.writeln("<br>");
+       document.writeln(dizi4+"adet:"+dizi4.length);
+
+       //Dİzi referansları tanımlanırken const kullanılmalı çünkü
+
+       document.writeln("<br>");
+       let dizi5=["İstanbul","Ankara","İzmir"];
+       document.writeln(dizi5+" "+typeof dizi5 );
+
+       document.writeln("<br>");
+       dizi5="şehir yok";
+       document.writeln(dizi5 + " " + typeof dizi5);
+
+       document.writeln("<br>");
+       const dizi6=["Elma","Armut","Kivi"];
+       document.writeln(dizi6);
+       document.writeln("<br>");
+       //dizi6="meyveler";//hata verir.daha sonradan problem olmasın diye const üzerinden gitmekte fayda var.
+
+       dizi6.push(12);
+
+       document.writeln(dizi6);
+
+       
+    </script>
+</body>
+</html>

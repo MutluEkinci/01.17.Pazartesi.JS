@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Soru: Rastgele 1-500arasında oluşturulan 100 sayısal değerden 2ye 5e ve 10 a tam bölunenlerin grafiğini çizen js kodunu yazınız.
+
+        let sayilar=new Array(500)
+        let sayac =0;
+        while(sayilar.length==500)
+        {
+            sayilar[sayac]=Math.ceil(Math.random()*500);
+            sayac++;
+        }
+        document.writeln(sayilar);
+
+        let iki=0;
+        let bes=0;
+        let on= 0;
+        for(item of sayilar)
+        {
+            if(item % 2==0)
+            {
+                iki++;
+            }
+            if (item % 5==0)
+            {
+                bes++;
+            }
+            if (item % 5==0 && item % 2==0)
+            {
+                on++;
+            }
+        }
+        document.writeln(iki+";"+bes+";"+on);
+        document.writeln("<div style='width:"+iki+"px ;height:50px; background-color:red;'>"+"İki"+"</div>")
+        document.writeln("<div style='width:"+bes+"px ;height:50px; background-color:blue;'>"+"Bes"+"</div>")
+        document.writeln("<div style='width:"+on+"px ;height:50px; background-color:gray;'>"+"On"+"</div>")
+
+
+    </script>
+    
+</body>
+</html>

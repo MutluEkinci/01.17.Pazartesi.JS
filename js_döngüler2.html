@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr:nth-child(odd){
+            background-color: silver;
+        }
+        tr:nth-child(even){
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //Soru:Satır ve sütun sayısı kullanıcı tarafından girilen tabloyu dinamik olarak oluşturunuz. ve starılara farklı renk verin.
+        let satır=parseInt(prompt("Satır sayısınız giriniz."));
+        let sutun=parseInt(prompt("Sütun sayısını giriniz."));
+        let mesaj=prompt("Mesaj giriniz.");
+        let tr="";
+        let td="";
+        
+        for(let i=0;i<satır;i++)
+        {
+            for(let j=0;j<sutun;j++)
+            {
+                td+="<td>"+mesaj+"</td>";
+            }
+            tr+="<tr>"+td+"</tr>";
+            td="";
+        }
+        document.writeln("<table>"+tr+"</table>")
+    </script>
+</body>
+</html>
